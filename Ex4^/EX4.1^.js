@@ -8,4 +8,3 @@ const Fibonacci = (n) => {
 };
 
 console.log(FibonacciArray(7));
-console.log(arr);
