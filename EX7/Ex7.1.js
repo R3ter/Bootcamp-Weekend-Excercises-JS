@@ -43,12 +43,28 @@ console.log(map(mapArr, (element) => element + 1));
 
 //------------------------------------------------------------------------------------------------------------------
 
-Array.prototype.map = function (callBack = (e) =>e ) {
+Array.prototype.map = function (callBack = (e) => e) {
   const arr = [];
   for (let i in this) {
     arr.push(callBack(this[i], i));
   }
   return arr;
 };
+Array.prototype.forEach = function (callBack = (e) => e) {
+  for (let i in this) {
+    arr.push(callBack(this[i], i));
+  }
+};
 
+Array.prototype.filter = function (callBack = (e) => e) {
+  for (let i in this) {
+    const arr = [];
+    for (let i in this) {
+      if (callBack(this[i], i)) {
+        arr.push(this[i]);
+      }
+    }
+    return arr;
+  }
+};
 console.log([1, 2, 4].map());
