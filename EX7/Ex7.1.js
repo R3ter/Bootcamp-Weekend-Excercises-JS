@@ -40,3 +40,15 @@ console.log("\n\nmap method______________");
 
 const mapArr = [1, 2, 3, 4, 5, 6, 7];
 console.log(map(mapArr, (element) => element + 1));
+
+//------------------------------------------------------------------------------------------------------------------
+
+Array.prototype.map = function (callBack = (e) =>e ) {
+  const arr = [];
+  for (let i in this) {
+    arr.push(callBack(this[i], i));
+  }
+  return arr;
+};
+
+console.log([1, 2, 4].map());
